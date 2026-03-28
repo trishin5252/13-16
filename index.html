@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#4CAF50">
+    
+    <!-- Mobile Web App Capable -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icons/icon-192x192.png">
+    
+    <title>Заметки (Практика 13-14)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Заметки</h1>
+            <p class="subtitle">Офлайн-приложение с Service Worker (Практика 13-14)</p>
+            <div id="connection-status" class="status online">
+                Онлайн
+            </div>
+        </header>
+
+        <main>
+            <!-- Форма добавления заметки -->
+            <form id="note-form" class="note-form">
+                <input 
+                    type="text" 
+                    id="note-input" 
+                    placeholder="Введите заметку..." 
+                    required
+                    autocomplete="off"
+                >
+                <button type="submit" id="add-btn">Добавить</button>
+            </form>
+
+            <!-- Список заметок -->
+            <div class="notes-header">
+                <h2>Список заметок</h2>
+                <span id="notes-count" class="count">0</span>
+            </div>
+            
+            <ul id="notes-list" class="notes-list">
+                <!-- Заметки будут добавляться сюда -->
+            </ul>
+
+            <!-- Статус Service Worker -->
+            <div id="sw-status" class="sw-status">
+                <h3>Service Worker</h3>
+                <p id="sw-state">Статус: Проверка...</p>
+                <button id="clear-cache-btn" class="btn-secondary">Очистить кэш</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>ИПТИП, Кафедра Индустриального Программирования</p>
+            <p>4 семестр, 2025/2026 уч. год</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

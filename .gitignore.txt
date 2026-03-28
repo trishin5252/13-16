@@ -1,0 +1,13 @@
+# ===== VS CODE =====
+.vscode/
+.DS_Store
+
+# ===== LOGS =====
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===== OS FILES =====
+Thumbs.db
+desktop.ini
